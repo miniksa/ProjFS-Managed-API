@@ -4,6 +4,18 @@
     <ProjFSManagedVersion>2.0.0</ProjFSManagedVersion>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+
+    <!-- Deterministic builds for reproducibility -->
+    <Deterministic>true</Deterministic>
+
+    <!-- Generate XML documentation -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Don't warn on missing/malformed XML comments -->
+    <NoWarn>$(NoWarn);CS1591;CS1570;CS1573;CS1584;CS1658</NoWarn>
+
+    <!-- Embed PDB in the DLL for simpler distribution -->
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
 </Project>
